@@ -5,7 +5,8 @@ use App\Http\Controllers\
 {
     AuthController,
     DashboardController,
-    BarangController
+    BarangController,
+    TempatController
 };
 
 /*
@@ -32,3 +33,6 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 // route barang
 Route::resource('/barang', BarangController::class);
+
+// Route Tempat
+Route::get('/tempat', [TempatController::class, 'index'])->name('tempat.index');
