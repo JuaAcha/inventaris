@@ -6,7 +6,7 @@ Barang
 
 @section('content')
 <section class="section-header">
-    Barang
+    Tempat
 </section>
 
 <section class="section-body">
@@ -60,3 +60,30 @@ Barang
     </div>
 </section>
 @endsection
+
+@push('script')
+<script>
+    let table;
+
+    $(function () {
+        table = $('.table').DataTable({
+            processing: true,
+            autowidth: false,
+            ajax: {
+                url: '{{ route('tempat.data') }}'
+            },
+            columns: [{
+                    data: 'DT_RowIndex'
+                },
+                {
+                    data: 'nama'
+                },
+                {
+                    data: 'aksi'
+                }
+            ]
+        });
+    });
+
+</script>
+@endpush

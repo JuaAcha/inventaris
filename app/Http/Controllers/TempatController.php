@@ -24,7 +24,28 @@ class TempatController extends Controller
      */
     public function create()
     {
-        //
+        $tempat =Tempat::all();
+        return view('tempat.index', compact('tempat'));
+    }
+
+    public function data(){
+        $tempat = Tempat::orderBy('id', 'asc')->get();
+
+        return datatables()
+            ->of($tempat)
+            ->addIndexColumn()
+            ->addColumn('aksi', function($tempat){
+                return '
+                
+                <div class="btn-group">
+                <button onclick="editData(`'.route('tempat.update', $tempat->id).'`)" class="btn btn-flat btn-xs btn-warning"><i class="fa fa-edit"></i></button>
+                <button onclick="deleteData(`'.route('tempat.destroy', $tempat->id).'`)" class="btn btn-flat btn-xs btn-danger"><i class="fa fa-trash"></i></button>
+                </div>
+                
+                ';
+            })
+            ->rawColumns(['aksi'])
+            ->make(true);
     }
 
     /**

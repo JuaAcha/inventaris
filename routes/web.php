@@ -35,4 +35,6 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::resource('/barang', BarangController::class);
 
 // Route Tempat
-Route::get('/tempat', [TempatController::class, 'index'])->name('tempat.index');
+// Route::get('/tempat', [TempatController::class, 'index'])->name('tempat.index');
+Route::get('/tempat/data', [TempatController::class, 'data'])->name('tempat.data');
+Route::resource('/tempat', TempatController::class);

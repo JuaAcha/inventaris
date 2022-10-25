@@ -15,6 +15,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS Libraries -->
+    <link rel="stylesheet" href="{{asset('assets/datatable/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/datatable/responsive.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/datatable/buttons.bootstrap4.min.css')}}">
+
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -52,6 +56,12 @@
     <script src="{{asset('assets/modules/jquery.nicescroll.min.js')}}"></script>
     <script src="{{asset('assets/modules/moment.min.js')}}"></script>
     <script src="{{asset('assets/modules/stisla.js')}}"></script>
+
+    <!-- DataTable -->
+    <script src="{{asset('/assets/datatable/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('/assets/datatable/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('/assets/datatable/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('/assets/datatable/responsive.bootstrap4.min.js')}}"></script>
 
     <!-- JS Libraies -->
 
