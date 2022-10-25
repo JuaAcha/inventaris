@@ -22,7 +22,7 @@ Barang
                     <table class="table table-stripped">
                         <thead>
                             <tr>
-                                <td style="width: 5%">#</td>
+                                <td style="width: 5%">Id</td>
                                 <td>Kode</td>
                                 <td>Nama</td>
                                 <td>Kategori</td>
