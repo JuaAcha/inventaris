@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
 
     <!-- General CSS Files -->
@@ -37,7 +38,7 @@
 
             <!-- Main Content -->
             <div class="main-content">
-                <section class="section">
+                <!-- <section class="section"> -->
                     @yield('content')
                     <!-- <div class="section-header">
                         <h1>Blank Page</h1>
@@ -45,7 +46,7 @@
 
                     <div class="section-body">
                     </div> -->
-                </section>
+                <!-- </section> -->
             </div>
             @include('template.footer')
         </div>
@@ -55,7 +56,7 @@
     <script src="{{asset('assets/modules/jquery.min.js')}}"></script>
     <script src="{{asset('assets/modules/popper.js')}}"></script>
     <script src="{{asset('assets/modules/tooltip.js')}}"></script>
-    <script src="{{asset('assets/modules/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('assets/modules/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/modules/jquery.nicescroll.min.js')}}"></script>
     <script src="{{asset('assets/modules/moment.min.js')}}"></script>
     <script src="{{asset('assets/modules/stisla.js')}}"></script>
@@ -70,11 +71,13 @@
     <!-- IziToast -->
     <script src="{{ asset('assets/izitoast/iziToast.min.js') }}"></script>
 
-    <!-- Page Specific JS File -->
+    <!-- sweetalert -->
+    <script src="{{ asset('assets/alert/sweetalert.min.js') }}"></script>
 
     <!-- Template JS File -->
     <script src="{{asset('assets/modules/scripts.js')}}"></script>
     <script src="{{asset('assets/modules/custom.js')}}"></script>
+
     @stack('script')
 </body>
 
