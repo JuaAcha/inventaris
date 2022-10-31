@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Blank Page &mdash; Stisla</title>
+    <title>@yield('title')</title>
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="{{ asset('assets/modules/bootstrap.min.css')}}">
@@ -15,10 +15,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS Libraries -->
+    <!-- DataTables -->
     <link rel="stylesheet" href="{{asset('assets/datatable/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/datatable/responsive.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/datatable/buttons.bootstrap4.min.css')}}">
-
+    
+    <!-- Izi Toast -->
+    <link rel="stylesheet" href="{{ asset('assets/izitoast/iziToast.min.css') }}">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -57,13 +60,15 @@
     <script src="{{asset('assets/modules/moment.min.js')}}"></script>
     <script src="{{asset('assets/modules/stisla.js')}}"></script>
 
-    <!-- DataTable -->
-    <script src="{{asset('/assets/datatable/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('/assets/datatable/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('/assets/datatable/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('/assets/datatable/responsive.bootstrap4.min.js')}}"></script>
+    <!-- DataTables -->
+    <script src="{{asset('assets/datatable/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('assets/datatable/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('assets/datatable/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('assets/datatable/responsive.bootstrap4.min.js')}}"></script>
 
     <!-- JS Libraies -->
+    <!-- IziToast -->
+    <script src="{{ asset('assets/izitoast/iziToast.min.js') }}"></script>
 
     <!-- Page Specific JS File -->
 
