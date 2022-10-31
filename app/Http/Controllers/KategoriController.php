@@ -21,7 +21,7 @@ class KategoriController extends Controller
 
     public function data()
     {
-        $kategori = Kategori::orderBy('id', 'desc')->get();
+        $kategori = Kategori::orderBy('id', 'asc')->get();
 
         return datatables()
             ->of($kategori)

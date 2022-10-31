@@ -152,7 +152,7 @@
                 {data: 'kategori_id'},
                 {data: 'tempat_id'},
                 {data: 'stok'},
-                {data: 'keterangan'},
+                {data: 'ket'},
                 {data: 'aksi'}
             ]
         });

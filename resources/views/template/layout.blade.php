@@ -75,6 +75,7 @@
     <!-- Template JS File -->
     <script src="{{asset('assets/modules/scripts.js')}}"></script>
     <script src="{{asset('assets/modules/custom.js')}}"></script>
+    @stack('script')
 </body>
 
 </html>

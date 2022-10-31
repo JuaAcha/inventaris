@@ -90,6 +90,7 @@
             ]
         });
     })
+    
     $('#formTambah').on('submit', function(e){
             if(! e.preventDefault()){
                 $.post($('#formTambah form').attr('action'), $('#formTambah form').serialize())

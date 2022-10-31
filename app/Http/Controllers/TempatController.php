@@ -21,7 +21,7 @@ class TempatController extends Controller
 
     public function data()
     {
-        $tempat = Tempat::orderBy('id', 'desc')->get();
+        $tempat = Tempat::orderBy('id', 'asc')->get();
 
         return datatables()
             ->of($tempat)
