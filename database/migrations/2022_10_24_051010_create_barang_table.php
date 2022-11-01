@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('kategori_id');
             $table->integer('tempat_id');
             $table->integer('stok');
-            $table->text('ket');
+            $table->text('keterangan');
             $table->timestamps();
         });
     }
