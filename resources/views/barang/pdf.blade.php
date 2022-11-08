@@ -4,6 +4,7 @@
     <tr>
         <td>Kode</td>
         <td>
+            <img src="data:image/png;base64, . DNS1D::getBarcodeSVG('4445645656', 'C39')" alt="">
             {{$barang->kode}}
         </td>
     </tr>

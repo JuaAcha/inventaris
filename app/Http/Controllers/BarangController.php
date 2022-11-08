@@ -51,9 +51,7 @@ class BarangController extends Controller
                 <div class="btn-group">
                     <button onclick="editData(`' .route('barang.update', $barang->id). '`)" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></button>
                     <button onclick="deleteData(`' .route('barang.destroy', $barang->id). '`)" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-
                     <a href="' .route('barang.pdf', $barang->id). '" target="_blank" class="btn btn-sm btn-success"><i class="fa fa-print"></i></a>
-
                 </div>
                 ';
             })
@@ -162,11 +160,27 @@ class BarangController extends Controller
         return redirect('barang');
     }
 
+    public function cetakBarcode(Request $request)
+    {
+        $databarang = array();
+        foreach ($request->id as $id) {
+            $barang = Barang::find($id);
+            $databarang[] = $barang;
+        }
+
+        $no = 1;
+
+        $pdf = PDF::loadview('barang.barcode', compact('databarang', 'no'));
+        $pdf->setPaper([0, 0, 289.13385827, 360], 'landscape' );
+        return $pdf->stream('barang.pdf');
+    }
+
     public function pdf($id)
     {
         $barang = Barang::find($id);
         
         $pdf = PDF::loadview('barang.pdf', compact('barang'));
+        $pdf->setPaper([0, 0, 289.13385827, 360], 'landscape' );
         return $pdf->stream('barang.pdf');
     }
 }

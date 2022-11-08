@@ -209,6 +209,10 @@
             $('#modalForm [name=_method]').val('post');
         }
 
+        function cetakBarcode(url){
+            $
+        }
+
         function pdf(url){
             $('.form-barang').attr('action', url).attr('target', '_blank').submit();
         }
